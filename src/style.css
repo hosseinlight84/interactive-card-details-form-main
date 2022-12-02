@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family:SpaceGrotesk;
+    src: url(../font/SpaceGrotesk-VariableFont_wght.ttf);
+    font-weight: 500;
+}
+body{font-family:SpaceGrotesk; font-weight: 100;}

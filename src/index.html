@@ -2,50 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive card details form</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../tailwind/tailwindfile.css">
+  <title>Document</title>
 </head>
-<body>
+<body class="flex flex-row">
+    <div>
+        <img class="w-full h-48.5" src="images/bg-main-desktop.png" alt="">
+      <div>
+          <img class="fixed w-96 top-36 left-40" src="../src/images/bg-card-front.png" alt="front-card">
+          <svg class="fixed w-96 top-44.5 left-44"  width="84" height="47" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff"/><path d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z" stroke="#fff"/></svg>
+          <p class="fixed w-96 top-66 left-44 text-white text-2xl">4231 3243 1413 4134</p>
+          <p class="fixed w-96 top-76 left-44 text-white text-lg">esmoon shakhs</p>
+          <p class="fixed w-96 top-76 left-110 text-white text-lg">mahesh</p>
+      </div>
+      <div>
+          <img class="fixed w-96 top-96 left-56" src="./images/bg-card-back.png" alt="back-card">
+          <p class="fixed w-96 top-140 left-150">cvc</p>
+      </div>
+    </div>
+  <!-------------------------------------------end of card position----------------------------------------------------->
 
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
+    <div class="fixed left-200 top-56">
+      <form action="" >
+      <p>cardholder name</p>
+      <input class="left-72 bg-slate-700" type="text">
+      <p>card number</p>
+      <input class="left-72 bg-slate-700" type="text">
+      <p>date</p>
+      <input class="w-12 bg-slate-700" type="text">
+      <input class="w-12 bg-slate-700" type="text">
+      <input class="w-22 bg-slate-700" type="text"><br>
+      <input type="submit">
+    </form>
+    </div>
 
-  000
-
-  Cardholder Name
-  e.g. Jane Appleseed
-
-  Card Number
-  e.g. 1234 5678 9123 0000
-
-  Exp. Date (MM/YY)
-  MM
-  YY
-
-  CVC
-  e.g. 123
-
-  Confirm
-
-  <!-- Completed state start -->
-
-  Thank you!
-  We've added your card details
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
 </html>

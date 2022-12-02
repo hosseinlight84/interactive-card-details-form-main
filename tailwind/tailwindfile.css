@@ -512,3 +512,132 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+
+.fixed {
+  position: fixed;
+}
+
+.top-36 {
+  top: 9rem;
+}
+
+.left-40 {
+  left: 10rem;
+}
+
+.top-44\.5 {
+  top: 163px;
+}
+
+.left-44 {
+  left: 11rem;
+}
+
+.top-44 {
+  top: 11rem;
+}
+
+.top-66 {
+  top: 260px;
+}
+
+.top-76 {
+  top: 308px;
+}
+
+.left-110 {
+  left: 455px;
+}
+
+.top-96 {
+  top: 24rem;
+}
+
+.left-56 {
+  left: 14rem;
+}
+
+.top-140 {
+  top: 474px;
+}
+
+.left-150 {
+  left: 536px;
+}
+
+.left-200 {
+  left: 900px;
+}
+
+.top-56 {
+  top: 14rem;
+}
+
+.left-72 {
+  left: 18rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.h-48\.5 {
+  height: 48.5rem;
+}
+
+.h-48 {
+  height: 12rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-96 {
+  width: 24rem;
+}
+
+.w-12 {
+  width: 3rem;
+}
+
+.w-22 {
+  width: 88px;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.bg-slate-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(51 65 85 / var(--tw-bg-opacity));
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@font-face {
+  font-family:SpaceGrotesk;
+
+  src: url(../font/SpaceGrotesk-VariableFont_wght.ttf);
+
+  font-weight: 500;
+}
+
+body{
+  font-family:SpaceGrotesk;
+  font-weight: 100;
+}
