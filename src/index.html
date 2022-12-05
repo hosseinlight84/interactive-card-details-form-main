@@ -5,41 +5,51 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../tailwind/tailwindfile.css">
+  <script src="script.js"></script>
   <title>Document</title>
 </head>
 <body class="flex flex-row">
     <div>
-        <img class="w-full h-48.5" src="images/bg-main-desktop.png" alt="">
+        <img class="w-full h-48.5 max-sm:hidden" src="images/bg-main-desktop.png" alt="desktop-bg">
+        <img class="hidden max-sm:block w-180 h-72 " src="images/bg-main-mobile.png" alt="mpbile-bg">
       <div>
-          <img class="fixed w-96 top-36 left-40" src="../src/images/bg-card-front.png" alt="front-card">
-          <svg class="fixed w-96 top-44.5 left-44"  width="84" height="47" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff"/><path d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z" stroke="#fff"/></svg>
-          <p class="fixed w-96 top-66 left-44 text-white text-2xl">4231 3243 1413 4134</p>
-          <p class="fixed w-96 top-76 left-44 text-white text-lg">esmoon shakhs</p>
-          <p class="fixed w-96 top-76 left-110 text-white text-lg">mahesh</p>
+          <img class="fixed w-96 top-36 left-40 max-sm:w-81 z-50 max-sm:top-36 max-sm:left-12 " src="../src/images/bg-card-front.png" alt="front-card">
+          <svg class="fixed w-96 top-44.5 left-44 z-50 max-sm:left-16"  width="84" height="47" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff"/><path d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z" stroke="#fff"/></svg>
+          <p id="card-num!" class="fixed w-96 top-66 left-44 z-50 text-white text-2xl max-sm:left-16">1243341341234134</p>
+          <p id="card-name!"  class="fixed w-96 top-76 left-44 z-50 text-white text-lg max-sm:left-16 max-sm:top-72 max-sm:-mt-2">esmoon shakhs</p>
+          <p id="card-date!"  class="fixed w-96 top-76 left-110 z-50 text-white text-lg max-sm:left-72 max-sm:top-72 max-sm:mt-2">mahesh</p>
       </div>
       <div>
-          <img class="fixed w-96 top-96 left-56" src="./images/bg-card-back.png" alt="back-card">
-          <p class="fixed w-96 top-140 left-150">cvc</p>
+          <img class="max-sm:w-81 fixed w-96 top-96 left-56  max-sm:top-8 max-sm:left-32" src="./images/bg-card-back.png" alt="back-card">
+          <p id="cvc!" class="fixed w-96 top-140 z-50 left-150 max-sm:top-28 max-sm:left-98">cvc</p>
       </div>
     </div>
   <!-------------------------------------------end of card position----------------------------------------------------->
-  <form action="" >
-    <div class="fixed left-200 top-56">
-      <p class="text-[#21082F] text-sm">cardholder name</p>
-      <input class="w-81 h-9 border-2 rounded" type="text">
+  
 
-      <p class="text-[#21082F] text-sm" >card number</p>
-      <input class="text-lg w-81 h-9 border-2 rounded" type="text">
+    <div id="form-div" class="fixed left-200 top-56 max-lg:left-190 max-sm:left-24 max-sm:top-96 ">
 
-      <p class="text-[#21082F] text-sm">date</p>
-      <input class="text-lg w-21 h-8 border-2 rounded" type="text">
+      <form id="frm1" action="#" onsubmit="return validation()" >
 
-      <input class="text-lg w-21 h-8 border-2 rounded" type="text">
+      <p class="text-[#21082F] text-sm mb-2">CARDHOLDER NAME</p>
+      <input  class="w-81 h-10 border-2 rounded outline-none mb-4 focus:border-[#600594] focus:border-8 p-2" type="text" id="card-name">
+
+      <p class="text-[#21082F] text-sm mb-2">CARD NUMBER</p>
+      <input class="text-lg w-81 h-10 border-2 rounded mb-4 outline-none focus:border-[#600594] focus:border-8 p-2" type="text" id="crd-num">
+          <p id="err-txt" class="hidden">thay are emty</p>
+        <p class="text-[#21082F] fixed ml-48">CVC</p>
+
+      <p class="text-[#21082F] text-sm top- mb-2">EXP.DATE</p>
+      <input class="text-lg w-21 h-9 border-2 rounded mb-2 outline-none focus:border-[#600594] focus:border-8 p-2" type="text" id="date1">
+
+      <input class="text-lg w-21 h-9 border-2 rounded mb-2 outline-none focus:border-[#600594] focus:border-8 p-2" type="text" id="date2">
       
-      <input class="text-lg w-43 h-8 border-2 rounded" type="text"><br>
+      <input class="text-lg w-43 h-9 border-2 rounded mb-4 outline-none focus:border-[#600594] focus:border-8 p-2" type="text" id="cvc"><br>
+
+      <input class="text-lg w-81 h-12 left-200  top-100 bg-[#21082F] text-white rounded " type="submit" id="submit">
+    </form>
     </div>
-    <input class="w-81 h-8 left-200 fixed top-100 bg-slate-700" type="submit">
-  </form>
+  
 
 </body>
 </html>
